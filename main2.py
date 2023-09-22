@@ -1,17 +1,23 @@
-class player:
-   def play(self):
-      print("the player is playing cricket.")
+# Python program to find the factorial of a number provided by the user
+# using recursion
 
-class Batsman(player):
-   def play(self):
-     print("the batsmans is batting.")
+def factorial(x):
+    """This is a recursive function
+    to find the factorial of an integer"""
 
-class Bowler(player):
-    def play(self):
-         print("the bowler is bowling.")
+    if x == 1:
+        return 1
+    else:
+        # recursive call to the function
+        return (x * factorial(x-1))
 
-batsman=Batsman()
-bowler=Bowler()
 
-batsman.play()
-bowler.play()
+# change the value for a different result
+num = 7
+
+# to take input from the user
+# num = int(input("Enter a number: "))
+
+# call the factorial function
+result = factorial(num)
+print("The factorial of", num, "is", result)
